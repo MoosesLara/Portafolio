@@ -1,0 +1,382 @@
+/*STYLE GLOBAL*/
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--styles), Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+/*STYLE OF FONTS*/
+:root{
+    --styles: 'Poppins', sans-serif; /*estilo para el menu*/
+}
+
+/*VARIBLE OF COLOR*/
+:root{
+    --menu: #1f2235;
+    --principal: #24263b;
+    --redes: #ff4a57;
+    --info: #dfdfdf;
+    --title: #ffffff;
+    --activo: #000;
+}
+
+
+/*STYLE MENU*/
+ .menu-bar{
+    width: 100%;
+    height: 105px;
+    background-color: var(--menu);
+ }
+
+.container-bar{
+    height: 105px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container-bar nav{
+    padding-top: 40px;
+    padding-right: 40px;
+}
+
+.container-bar nav a{
+    font-size: 17px;
+    font-weight: 400;
+    padding: 0px 20px;
+    color: var(--title);
+    text-decoration: none; 
+}
+
+.container-bar nav a:hover{
+    color: var(--redes);
+    transition-duration: 0.4s;
+}
+
+/*STYLE MAIN SECTION*/
+#main-section{
+    width: 100%;
+    height: 755px;
+    background-color: var(--principal);
+}
+
+.section-content{
+    height: 755px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main-one, .main-two{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.main-one li{
+    list-style: none;
+    display: inline-block;
+}
+
+.main-one li a i{
+    height: 50%;
+    margin: 10px;
+    padding: 17px 20px;
+    border-radius: 50%;
+    color: var(--title);
+    border: 2px solid var(--redes);
+    background-color: var(--menu);
+}
+
+.main-one li a i:hover{
+    animation: icono .7s ease;
+}
+
+@keyframes icono{
+    form{
+        transform: rotate3d(0,0,0,0);
+    }
+    to{
+        transform: rotate3d(0,1,0, 360deg);
+    }
+}   
+
+.main-one h1{
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 50px;
+    color: var(--title);
+}
+
+.main-one p{
+    font-weight: 300;
+    color: var(--info);
+    font-size: 27px;
+}
+
+.main-one .portafolio a{
+    line-height: 200px;
+    padding: 15px 40px;
+    color: var(--title);
+    border-radius: 30px;
+    text-decoration: none;
+    border  : 2px solid var(--redes);
+}
+
+.main-one .portafolio a:hover{
+    transition-duration: 0.4s;
+    background-color: var(--redes);
+}
+
+.main-two .box-space{
+    display: flex;
+    justify-content: center;
+}
+
+.main-two .box-space img{
+    width: 70%;
+    margin-bottom: -65px;
+}
+
+/*SKILL SECTION*/
+
+#skill-section{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--menu);
+}
+
+.skill-one{
+    width: 55%;
+    margin: auto;
+    padding-top: 120px;
+    text-align: center;
+}
+
+.skill-one h4{
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--redes);    
+}
+
+.skill-one h3,
+.about-me h3{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px 0px;
+    color: var(--title);
+}
+
+.skill-one p{
+    font-size: 16px;
+    color: var(--info);
+}
+
+.skill-one .division{
+    width: 50px;
+    margin: 50px auto;
+}
+
+.skill-two .box-info{
+    display: flex;
+    padding: 20px 25px;
+    flex-direction: row;
+    margin-bottom: 25px;
+    background-color: var(--principal);
+}
+
+.skill-two .box-info:hover{
+    transition-duration: 0.7s;
+    background-color: var(--redes);
+}
+
+.skill-two .box-info i{
+    font-size: 40px;
+    color: var(--title);
+}
+
+.skill-two .box-info h4{
+    margin: 10px 20px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--title);
+}
+
+.skill-two .box-info p{
+    color: var(--info);
+}
+
+/*ABOUT SECTION*/
+#about-section{
+    background-color: var(--principal);
+}
+
+.main-two-me{
+    margin-top: -245px;
+}
+
+.about-me{
+    width: 80%;
+    margin-top: -250px;
+    margin-left: 50px;
+}
+
+.about-me p{
+    font-size: 16px;
+}
+
+/*PORTAFOLIO SECTION*/
+#portafolio-section{
+    background-color: var(--menu);
+}
+
+.categorias{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.categorias a{
+    font-size: 18px;
+    font-weight: 400;
+    margin: 10px 20px;
+    color: var(--info);
+    text-decoration: none;
+}
+
+.categorias a:hover{
+    color: var(--redes);
+}
+
+.categorias a.activo{
+    padding: 0 10px;
+    color: var(--title);
+    border-radius: 20px;
+    background-color: var(--redes);
+}
+
+/*GRID*/
+.grid{
+    opacity: 0;
+    width: 100%;
+    position: relative;
+    transition: opacity 0.5s linear 1s;
+}
+
+.grid.imagenes-cargadas{
+    opacity: 1;
+}
+
+.grid .item{
+    padding: 0;
+    margin: 10px;
+    display: block;
+    position: absolute;
+    width: calc(33.333333% - 20px);
+}
+
+.grid .item-contenido{
+    position: relative;
+}
+
+.grid .item img{
+    width: 100%;
+    cursor: pointer;
+    vertical-align: top;
+    border-radius: 3%;
+}
+
+/*Overlay*/
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .9);
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.overlay.activo{
+    display: flex
+}
+
+.overlay img {
+    max-width: 100%;
+}
+
+.overlay .descripcion{
+    display: block;
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 5px;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.contenedor-img{
+    position: relative;
+}
+
+.overlay #btn-cerrar-popup{
+    background: none;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+}
+
+/*CONTAC SECTION*/
+#contac-section{
+    height: 600px;
+}
+
+.box-contac{
+    display: flex;
+    padding: 10px;
+    margin: 100px 0px;
+    flex-direction: row;
+    position: relative;
+    background-color: var(--menu);
+}
+
+.box-contac:hover{
+    transition-duration: 0.5s;
+    background-color: var(--redes);
+}
+
+.box-contac .box-info-contac{
+    color: var(--title);
+    margin-left: 20px;
+}
+
+/*FOOTER SECTION*/
+
+#footer-section{
+    background-color: var(--menu);
+}
+
+.box-footer{
+    display: flex;
+    padding: 30px 0px;
+    color: var(--title);
+    flex-direction: row;
+    justify-content: center;
+}
+
+.box-footer a{
+    padding-left: 10px;
+    color: var(--redes);
+    text-decoration: none;
+}
